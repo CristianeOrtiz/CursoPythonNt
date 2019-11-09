@@ -7,6 +7,10 @@ class Endereco:
     bairro = ''
     cidade = ''
     cep = ''
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 1cacb642048ce01c80907287f44f946c81119424
     def cadastrar_endereco(self):
         self.logradouro = input('Digite seu logradouro:')
         self.numero = input('Digite seu numero:')

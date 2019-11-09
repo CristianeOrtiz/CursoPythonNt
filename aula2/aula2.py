@@ -51,12 +51,32 @@ print('\n'*2)
 
 pessoa = Pessoa() #variavel 
 endereco = Endereco()
+<<<<<<< HEAD
 
 print(pessoa.cadastrar_pessoa()) #Imprimindo os métodos
 print(endereco.cadastrar_endereco())
 
+=======
+pessoa.cadastrar_pessoa()
+endereco.cadastrar_endereco()
+
+print(pessoa.nome)
+print(endereco.logradouro)
+
+print(pessoa.cadastrar_pessoa())
+print(endereco.cadastrar_endereco())
+
+
+>>>>>>> 1cacb642048ce01c80907287f44f946c81119424
 print('\n'*2)
 print('='*50) 
 
 
+<<<<<<< HEAD
 # print(f'Nome: {nome}\n Sobrenome: {sobrenome}\n DtNas: {data_nascimento}\n E-mail: {email}\n Senha: {senha}')
+=======
+# print(f'Nome: {nome}\n Sobrenome: {sobrenome}\n DtNas: {data_nascimento}\n E-mail: {email}\n Senha: {senha}')
+
+
+# print(pessoa.cadastrar_pessoa()) #Imprimindo os métodos
+>>>>>>> 1cacb642048ce01c80907287f44f946c81119424
