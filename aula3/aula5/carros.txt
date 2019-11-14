@@ -1,1 +1,4 @@
 Volkswagen;Jetta;Sedan;2016
+Volkswagen;Golf;Hatch;2015
+Volkswagen;Gol;Hatch;2016
+Volkswagen;Virtus;Sedan;2017

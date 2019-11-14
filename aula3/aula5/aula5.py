@@ -4,19 +4,15 @@
 #4- Criar tela que lista os carros cadastrados
 #5- Criar logica que le a lista do arquivo texto
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from carro import Carro
 nome_pagina = 'Carro'
 app = Flask(__name__)
 
 @app.route('/')
 def inicio():
-    lista_carros = []
-    with open('aula5/carros.txt', 'r') as arquivo:
-        for l in arquivo:
-            vetor = l.split(';')
-            lista_carros.append(vetor)
-    return render_template('indexx.html', nome = nome_pagina, lista = lista_carros)
+    carro = Carro()
+    return render_template('indexx.html', nome = nome_pagina, lista = carro.lista_todos())
 
 
 @app.route('/cadastrar')
@@ -29,9 +25,9 @@ def salvar():
     modelo = request.args['modelo'] 
     categoria = request.args['categoria']
     ano = request.args['ano']
-    with open('aula5/carros.txt', 'a') as arq:
-        arq.write(f'{marca};{modelo};{categoria};{ano}\n')
-    return 'Cadastro efetuado com sucesso!'
+    carro = Carro(marca, modelo, categoria, ano)
+    carro.cadastrar()
+    return redirect('/')
 
 
 app.run(debug=True)
